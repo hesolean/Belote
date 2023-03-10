@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.js" defer></script>
+    <title>Compter les points à la belote</title>
+</head>
+<body class="p-3 mb-2 bg-success text-white">
+    <h1 class="title text-center">Bienvenue dans le compteur de points pour vos parties de belote</h1>
+<!-- entrer le nom des équipes-->
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <h2 class="text-center mb-3">Equipe 1</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="joueur 1" aria-label="Username1" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="joueur 2" aria-label="Username2" aria-describedby="basic-addon2">
+                </div>
+            </div>
+            <div class="col-6">
+                <h2 class="text-center mb-3">Equipe 2</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="joueur 1" aria-label="Username3" aria-describedby="basic-addon3">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="joueur 2" aria-label="Username4" aria-describedby="basic-addon4">
+                </div>
+            </div>
+<!-- définition de la partie-->
+            <h2 class="text-center mb-3">Définition de la partie</h2>
+            <div class="row justify-content-md-center">
+                <div class="col-5">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="points gagnants de la partie" aria-label="PointsGagnants" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="nombre de parties" aria-label="NbrParties" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="checkannonces">
+                        <label class="form-check-label" for="checkannonces">Annonces</label>
+                      </div>
+                </div>
+            </div>
+<!-- définition du pli-->
+            <h2 class="text-center mb-3">Définition du pli</h2>
+            <div class="row justify-content-md-center">
+                <div class="col-2">
+<!--qui prend ?-->
+                    <h3 class="mb-3">Qui a pris ?</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="preneur" id="preneur1" checked>
+                        <label class="form-check-label" for="preneur1">
+                          Equipe 1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="preneur" id="preneur2">
+                        <label class="form-check-label" for="preneur2">
+                          Equipe 2
+                        </label>
+                      </div>
+                </div>
+<!--Score-->
+                <div class="col-5">                    
+                    <h3 class="mb-3">Points comptés</h3>
+                    <div class="row justify-content-md-center">
+                        <div class="col-5">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="dedans">
+                                <label class="form-check-label" for="dedans">Dedans</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="capot">
+                                <label class="form-check-label" for="capot">Capot</label>
+                            </div>
+                        </div>
+<!-- points -->
+                        <div class="col-7">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="points" id="points1" checked>
+                                <label class="form-check-label" for="points1">
+                                  Equipe 1
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="points" id="points2">
+                                <label class="form-check-label" for="points2">
+                                  Equipe 2
+                                </label>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="points" aria-label="points" aria-describedby="basic-addon1">
+                            </div>
+                        </div>                       
+                    </div>                    
+                </div>
+<!-- 10 de der-->
+                <div class="col-2">
+                    <h3 class="mb-3">Dix de der ?</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="der" id="der1">
+                        <label class="form-check-label" for="der1">
+                          Equipe 1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="der" id="der2">
+                        <label class="form-check-label" for="der2">
+                          Equipe 2
+                        </label>
+                      </div>
+                </div>
+<!-- Annonces -->
+                <div class="col-3">
+                    <h3 class="mb-3">Annonces</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="annoncebr">
+                        <label class="form-check-label" for="annoncebr">
+                          Belote et rebelote
+                        </label>
+                    </div>                    
+                    <div class="input-group mb-3">
+                        <label class="form-check-label me-3" for="annoncet">
+                            Tierce
+                        </label>
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox">                        
+                    </div>
+                    <div class="input-group mb-3">                        
+                        <label class="form-check-label me-3" for="annonceq">
+                            Cinquante
+                        </label>
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox">                        
+                    </div>
+                    <div class="input-group mb-3">
+                        <label class="form-check-label me-3" for="annoncec">
+                            Cent
+                        </label>
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox">                        
+                    </div>
+                    <div class="input-group mb-3">
+                        <label class="form-check-label me-3" for="annonceca">
+                            Carré
+                        </label>
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with checkbox">
+                    </div>
+                </div>
+            </div>                                  
+        </div>        
+    </div>   
+</body>
+</html>
